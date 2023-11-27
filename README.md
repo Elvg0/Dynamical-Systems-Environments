@@ -11,11 +11,11 @@ Where $v$ is the velocity of the vehicle, $m$ the mass, $c$ the momentum loss du
 
 $$\dot{v}+cv=u$$
 
-The default value of $c$ is 0.05. Being $v_0$ the target velocity (10 by default), the reward function if given by:
+The default value of $c$ is 0.02. Being $v_0$ the target velocity (5 by default), the reward function if given by:
 
 $$r(v) = -\||v-v_0\||^2_2 + 100_{v=v_0}$$
 
-The system is simulated using Euler's method with timestep of 0.05 by default. Each episode is 100 timesteps. The observation and action space are $\mathbb{R}$.
+The system is simulated using Euler's method with timestep of 0.001 by default. Each episode is 100 timesteps. The observation and action space are $\mathbb{R}$.
 
 <p align="center">
   <img src="cargif.gif" alt="animated" />
