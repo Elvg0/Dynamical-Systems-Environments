@@ -11,12 +11,17 @@ Where $v$ is the velocity of the vehicle, $m$ the mass, $c$ the momentum loss du
 
 $$\dot{v}+cv=u$$
 
-The default value of $c$ is 0.02. Being $v_0$ the target velocity (5 by default), the reward function if given by:
+The default value of $c$ is 0.02. Being $v_0$ the target velocity (8 by default), the reward function if given by:
 
-$$r(v) = -\||v-v_0\||^2_2 + 100_{v=v_0}$$
+$$r(v) = -\||u\||^2_2 + \begin{cases}100 & v=v_0 \\
+-100 & v \neq v_0
+\end{cases}$$
 
 The system is simulated using Euler's method with timestep of 0.001 by default. Each episode is 100 timesteps. The observation and action space are $\mathbb{R}$.
 
 <p align="center">
   <img src="cargif.gif" alt="animated" />
 </p>
+
+The following plots are examples of the results of the training of a Deep Deterministic Policy Gradient algorithm using Pytorch:
+
