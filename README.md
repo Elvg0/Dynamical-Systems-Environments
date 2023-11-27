@@ -25,3 +25,7 @@ The system is simulated using Euler's method with timestep of 0.001 by default. 
 
 The following plots are examples of the results of the training of a Deep Deterministic Policy Gradient algorithm using Pytorch:
 
+<p align="center">
+  <img src="Rewards_Cruise_Control.png" />
+  <img src="Test_Cruise_Control.png"  />
+</p>
