@@ -15,6 +15,7 @@ The default value of $c$ is 0.05. Being $v_0$ the target velocity (10 by default
 
 $$r(v) = -\||v-v_0\||^2_2 + 100_{v=v_0}$$
 
+The system is simulated using Euler's method with timestep of 0.05 by default. Each episode is 100 timesteps. The observation and action space are $\mathbb{R}$.
 
 <p align="center">
   <img src="cargif.gif" alt="animated" />
