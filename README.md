@@ -11,4 +11,10 @@ Where $v$ is the velocity of the vehicle, $m$ the mass, $c$ the momentum loss du
 
 $$\dot{v}+cv=u$$
 
-Being $u$ the control signal. The default value of $c$ is 0.05.
+Being $u$ the control signal. The default value of $c$ is 0.05. The default reward function if given by:
+
+$$r(v) = -\||v-v_0\||^2_2 + 100_{v=v_0}$$
+
+<p align="center">
+  <img src="cargif.gif" alt="animated" />
+</p>
