@@ -27,5 +27,5 @@ The following plots are examples of the results of the training of a Deep Determ
 
 <p align="center">
   <img src="Rewards_Cruise_Control.png" />
-  <img src="Test_Cruise_Control.png"  />
+  <img src="test_Cruise_Control.png"  />
 </p>
