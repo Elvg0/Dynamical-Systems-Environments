@@ -76,6 +76,8 @@
   -\frac{c}{a} & -\frac{b}{a} \end{bmatrix} \text{ and } B = \begin{bmatrix}0  \\ 
   1 \end{bmatrix}$$
 
-        
+<p align="center">
+  <img src="images/phase_portrait.png" />
+</p>   
               
 
