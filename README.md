@@ -44,7 +44,7 @@ $$r(v,u) = -0.1\|u\| - \||v-v_0\||_2$$
   
   $$\ddot{x} +c \dot{x} + k x =u$$
 
-  The default parameters in the model are $c=1$, $k=5$, and the simulation timestep is $0.1$. In this system, the objective is to stop the movement at some given point $x_0$, (default being $x_0=2$). The Reward function is given by:
+  The default parameters in the model are $c=1$, $k=5$, and the simulation timestep is $0.1$ with 150 steps per episode. In this system, the objective is to stop the movement at some given point $x_0$, (default being $x_0=2$). The Reward function is given by:
 
   $$r(x,u) = -0.1\|u\| - \| \dot{x} \| - \||x-x_0\||_2 $$
 
@@ -52,8 +52,8 @@ $$r(v,u) = -0.1\|u\| - \||v-v_0\||_2$$
 
   <p align="center">
   <img src="Rewards_Mass_Spring_Damper.png" />
-  <img src="test_Displacement_Mass_Spring_Damper.png"  />
-  <img src="test_Velocity_Mass_Spring_Damper.png"  />
+  <img src="Results_Displacement_Mass_Spring_Damper.png"  />
+  <img src="Results_Velocity_Mass_Spring_Damper.png"  />
 </p>
 
  
