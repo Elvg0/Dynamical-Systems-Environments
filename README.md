@@ -14,9 +14,7 @@ $$\dot{v}+cv=u$$
 
   The default value of $c$ is 0.02. Being $v_0$ the target velocity (8 by default), the reward function if given by:
 
-$$r(v) = -\||u\||^2_2 + \begin{cases}100 & v=v_0 \\
--100 & v \neq v_0
-\end{cases}$$
+$$r(v) = -0.1\|u\| - \||v-v_0\||_2$$
 
   The system is simulated using Euler's method with timestep of 0.001 by default. Each episode is 100 timesteps. The observation and action space are $\mathbb{R}$.
 
@@ -27,8 +25,8 @@ $$r(v) = -\||u\||^2_2 + \begin{cases}100 & v=v_0 \\
   The following plots are examples of the results of the training of a Deep Deterministic Policy Gradient algorithm using Pytorch:
 
 <p align="center">
-  <img src="Rewards_Cruise_Control.png" />
-  <img src="test_Cruise_Control.png"  />
+  <img src="Rewards_Cruise_Control_2.png" />
+  <img src="test_Cruise_Control_2.png"  />
 </p>
 
 # Mass-Spring-Damper Model
