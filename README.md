@@ -56,5 +56,26 @@
   <img src="images/Results_Velocity_Mass_Spring_Damper.png"  />
 </p>
 
+# Custom Linear System
+
+  Environment to simulate some linear system of type:
+  
+  $$\dot{X} = AX + BU$$
+
+  Just input matrix $A$ and $B$ and the objective vector $X_0$, which is $\[0, 0 \]^T$ by default. The default number of steps is 150 and the reward function is:
+
+  $$r(X,u) = -0.1\|u\| -  \||X-X_0\||_2 $$
+  
+  To simulate and control some arbitrary linear second order system of shape:
+  
+  $$a\ddot{y}+b\dot{xy}+cy=u$$
+
+ The matrices $A$ and $B$ take the shape:
  
+  $$A = \begin{bmatrix}0 & 1 \\ 
+  -\frac{c}{a} & -\frac{b}{a} \end{bmatrix} \text{ and } B = \begin{bmatrix}0  \\ 
+  1 \end{bmatrix}$$
+
+        
+              
 
