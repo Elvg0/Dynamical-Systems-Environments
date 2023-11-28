@@ -112,4 +112,55 @@ class Mass_Spring_Damper_Env(gym.Env):
         return self.state
 
 
+class Custom_2nd_order_Env(gym.Env):
+    
+    def __init__(self, matrix, objective=[ 0.,0.], dt=0.05, noise=0.0):
+        self.objective=np.array(objective)
+        self.observation_space = Box(low=np.array([-100, -100]), high=np.array([100, 100]),dtype=np.float32)
+        self.action_space=Box(low=-20, high=20, dtype=np.float32)
+        self.episode_length=200
+        self.dt=dt
+        self.a=matrix[0,0]
+        self.b=matrix[0,1]
+        self.c=matrix[1,0]
+        self.d=matrix[1,1]
+        self.noise=noise
+        self.state = np.random.rand(2)
+        
+        
+    def step(self, action):
+        x = self.state[0]
+        # print(x)
+        v = self.state[1]
+        xnext = x + self.dt * (self.a*x+ self.b*v)
+        vnext = v + self.dt*(action + self.c*x + self.d*v)
+        self.state = np.array([xnext, vnext[0]], dtype=np.float32)
+        self.episode_length-=1
+        
+        reward =  -0.1*(np.absolute(action[0]))-np.linalg.norm(xnext-self.objective[0])-np.linalg.norm(vnext-self.objective[1])
+
+        
+        done=False
+        if self.episode_length<=0:
+            truncated = True
+            
+            self.state =self.reset()
+        else:
+            truncated=False
+
+
+            self.state=self.state+np.random.randn(1)*self.noise
+        
+        
+        info={}
+        
+        return self.state, reward, done, truncated, info
+    
+    def render(self):
+        pass
+    
+    def reset(self):
+        self.state = np.random.rand(2)
+        self.episode_length=200
+        return self.state
 
