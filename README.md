@@ -14,7 +14,7 @@ $$\dot{v}+cv=u$$
 
   The default value of $c$ is 0.02. Being $v_0$ the target velocity (8 by default), the reward function if given by:
 
-$$r(v) = -0.1\|u\| - \||v-v_0\||_2$$
+$$r(v,u) = -0.1\|u\| - \||v-v_0\||_2$$
 
   The system is simulated using Euler's method with timestep of 0.001 by default. Each episode is 100 timesteps. The observation and action space are $\mathbb{R}$.
 
@@ -22,7 +22,7 @@ $$r(v) = -0.1\|u\| - \||v-v_0\||_2$$
   <img src="cargif.gif" alt="animated" />
 </p>
 
-  The following plots are examples of the results of the training of a Deep Deterministic Policy Gradient algorithm using Pytorch:
+  The following plots are examples of the results of the training of a Deep Deterministic Policy Gradient algorithm (DDPG) using Pytorch:
 
 <p align="center">
   <img src="Rewards_Cruise_Control_2.png" />
@@ -30,6 +30,10 @@ $$r(v) = -0.1\|u\| - \||v-v_0\||_2$$
 </p>
 
 # Mass-Spring-Damper Model
+
+<p align="center">
+  <img src="Mass_Spring_Damper_System_2.gif" alt="animated"/>
+</p>
 
  The homogeneous equation for the mass-spring-damper model is given by   
   
@@ -40,11 +44,16 @@ $$r(v) = -0.1\|u\| - \||v-v_0\||_2$$
   
   $$\ddot{x} +c \dot{x} + k x =u$$
 
-  In this system, the objective is to stop the movement at some point.
+  The default parameters in the model are $c=1$, $k=5$, and the simulation timestep is $0.1$. In this system, the objective is to stop the movement at some given point $x_0$, (default being $x_0=2$). The Reward function is given by:
 
-  
-<p align="center">
-  <img src="Mass_Spring_Damper_System_2.gif" alt="animated"/>
+  $$r(x,u) = -0.1\|u\| - \| \dot{x} \| - \||x-x_0\||_2 $$
+
+  Results of a DDPG agent in the system:
+
+  <p align="center">
+  <img src="Rewards_Mass_Spring_Damper.png" />
+  <img src="test_Displacement_Mass_Spring_Damper.png"  />
+  <img src="test_Velocity_Mass_Spring_Damper.png"  />
 </p>
 
  
