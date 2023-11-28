@@ -72,7 +72,7 @@
   
   To simulate and control some arbitrary linear second order system of shape:
   
-  $$a\ddot{y}+b\dot{xy}+cy=u$$
+  $$a\ddot{x}+b\dot{x}+cx=u$$
 
  The matrices $A$ and $B$ take the shape:
  
