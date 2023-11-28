@@ -29,3 +29,13 @@ The following plots are examples of the results of the training of a Deep Determ
   <img src="Rewards_Cruise_Control.png" />
   <img src="test_Cruise_Control.png"  />
 </p>
+
+# Mass-Spring-Damper Model
+
+The homogeneous equation for the mass-spring-damper model is given by:
+
+$$\ddot{x} +\frac{c}{m} \dot{x} + \frac{k}{m} x =0$$
+
+Where $m$ is the mass, $c$ the dampening coeficient and $k$ the spring frequency. Now, simplifying the model by assuming $m=1$, and adding an external force as the control $(u)$, we get the equation:
+
+$$\ddot{x} +c \dot{x} + k x =u$$
