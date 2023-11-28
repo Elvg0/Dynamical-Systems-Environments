@@ -19,20 +19,20 @@ $$r(v,u) = -0.1\|u\| - \||v-v_0\||_2$$
   The system is simulated using Euler's method with timestep of 0.001 by default. Each episode is 100 timesteps. The observation and action space are $\mathbb{R}$.
 
 <p align="center">
-  <img src="cargif.gif" alt="animated" />
+  <img src="images/cargif.gif" alt="animated" />
 </p>
 
   The following plots are examples of the results of the training of a Deep Deterministic Policy Gradient algorithm (DDPG) using Pytorch:
 
 <p align="center">
-  <img src="Rewards_Cruise_Control_2.png" />
-  <img src="test_Cruise_Control_2.png"  />
+  <img src="images/Rewards_Cruise_Control_2.png" />
+  <img src="images/test_Cruise_Control_2.png"  />
 </p>
 
 # Mass-Spring-Damper Model
 
 <p align="center">
-  <img src="Mass_Spring_Damper_System_2.gif" alt="animated"/>
+  <img src="images/Mass_Spring_Damper_System_2.gif" alt="animated"/>
 </p>
 
  The homogeneous equation for the mass-spring-damper model is given by   
@@ -51,9 +51,9 @@ $$r(v,u) = -0.1\|u\| - \||v-v_0\||_2$$
   Results of a DDPG agent in the system:
 
   <p align="center">
-  <img src="Rewards_Mass_Spring_Damper.png" />
-  <img src="Results_Displacement_Mass_Spring_Damper.png"  />
-  <img src="Results_Velocity_Mass_Spring_Damper.png"  />
+  <img src="images/Rewards_Mass_Spring_Damper.png" />
+  <img src="images/Results_Displacement_Mass_Spring_Damper.png"  />
+  <img src="images/Results_Velocity_Mass_Spring_Damper.png"  />
 </p>
 
  
