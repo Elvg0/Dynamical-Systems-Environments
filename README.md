@@ -32,15 +32,18 @@ The following plots are examples of the results of the training of a Deep Determ
 
 # Mass-Spring-Damper Model
 
-
-<img src="Simple_harmonic_oscillator.gif" align="left" alt="animated" width="100px"/> 
-
- <br />
- The homogeneous equation for the mass-spring-damper model is given by   <br />
+ The homogeneous equation for the mass-spring-damper model is given by   
   
   $$\ddot{x} +\frac{c}{m} \dot{x} + \frac{k}{m} x =0$$
   
- <br />
- Here m is the mass, c the dampening coeficient, k the frequency. With m=1 and adding an external force as the control we get: <br />
+ 
+ Here m is the mass, c the dampening coeficient, k the frequency. With m=1 and adding an external force as the control we get: 
   
   $$\ddot{x} +c \dot{x} + k x =u$$
+  
+<p align="center">
+  <img src="Mass_Spring_Damper_System.gif" alt="animated"/>
+</p>
+
+ 
+
