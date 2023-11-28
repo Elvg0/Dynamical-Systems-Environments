@@ -66,7 +66,7 @@
   
   $$\dot{X} = AX + BU$$
 
-  Just input matrix $A$ and $B$ and the objective vector $X_0$, which is $\[0, 0 \]^T$ by default. The default number of steps is 150 and the reward function is:
+  Just input matrix $A$ and $B$ and the objective vector $X_0$, which is $\[0, 0 \]^T$ by default. The default number of steps is 200, with 0.05 timestep and the reward function is:
 
   $$r(X,u) = -0.1\|u\| -  \||X-X_0\||_2 $$
   
