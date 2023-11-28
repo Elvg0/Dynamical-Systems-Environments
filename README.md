@@ -58,6 +58,10 @@
 
 # Custom Linear System
 
+<p align="center">
+  <img src="images/phase_portrait.gif" alt="animated" />
+</p>   
+        
   Environment to simulate some linear system of type:
   
   $$\dot{X} = AX + BU$$
@@ -76,8 +80,5 @@
   -\frac{c}{a} & -\frac{b}{a} \end{bmatrix} \text{ and } B = \begin{bmatrix}0  \\ 
   1 \end{bmatrix}$$
 
-<p align="center">
-  <img src="images/phase_portrait.png" />
-</p>   
-              
+      
 
